@@ -8,18 +8,27 @@
   
   <title>Frontend Mentor | [Blogr]</title>
 
+  <!-- OVERPASS & UBUNTU STYLING -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
   <header class="header">
+    <div class="header-container">
     <div class="navbar">
-      <img src="images/logo.svg" alt="Logo">
-      <nav class="nav">
+      <img class="logo" src="images/logo.svg" alt="Logo">
+      <img class="hamburger" src="images/icon-hamburger.svg" alt="Hamburger Icon">
+      <nav class="nav close">
         <div class="nav-items">
           <div class="nav-item">
-            <p>Product</p>
-            <img src="" alt="dropdown arrow">
-            <div class="dropdown close">
+            <div id="product-toggle" class="nav-item__header">
+              <p>Product</p>
+              <img src="images/icon-arrow-dark.svg" alt="dropdown arrow">
+            </div>
+            <div id="product-dropdown" class="dropdown close">
               <p>Overview</p>
               <p>Pricing</p>
               <p>Marketplace</p>
@@ -29,9 +38,11 @@
           </div>
 
           <div class="nav-item">
-            <p>Company</p>
-            <img src="" alt="dropdown arrow">
-            <div class="dropdown close">
+            <div id="company-toggle" class="nav-item__header">
+              <p>Company</p>
+              <img src="images/icon-arrow-dark.svg" alt="dropdown arrow">
+            </div>
+            <div id="company-dropdown" class="dropdown close">
               <p>About</p>
               <p>Team</p>
               <p>Blog</p>
@@ -40,9 +51,11 @@
           </div>
 
           <div class="nav-item">
-            <p>Connect</p>
-            <img src="" alt="dropdown arrow">
-            <div class="dropdown close">
+            <div id="connect-toggle" class="nav-item__header">
+              <p>Connect</p>
+              <img src="images/icon-arrow-dark.svg" alt="dropdown arrow">
+            </div>
+            <div id="connect-dropdown" class="dropdown close">
               <p>Contact</p>
               <p>Newsletter</p>
               <p>LinkedIn</p>
@@ -63,62 +76,60 @@
       <button class="btn fill">Start for Free</button>
       <button class="btn outline">Learn More</button>
     </div>
-
+  </div>
   </header>
-
+<!-- 
   <main>
-    <section>
-      <h2>Designed for the future</h2>
-      <div>
-        <article>
-          <div>
-            <h2></h2>Introducing an extensible editor
-            <p>
-              Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
-              The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
-              videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
-              change the looks of a blog.
-            </p>
-          </div>
+    <section class="section">
+      <h2 class="section-title">Designed for the future</h2>
+      <article>
+        <div>
+          <h2>Introducing an extensible editor</h2>
+          <p>
+            Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+            The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+            videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+            change the looks of a blog.
+          </p>
+        </div>
 
-          <div>
-            <h2>Robust content management</h2>
-            <p>
-              Flexible content management enables users to easily move through posts. Increase the usability of your blog 
-              by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.        
-            </p>
-          </div>
-        </article>
-        <img src="images/illustration-editor-desktop.svg" alt="Editor Desktop">
-      </div>
+        <div>
+          <h2>Robust content management</h2>
+          <p>
+            Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+            by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.        
+          </p>
+        </div>
+      </article>
+      <img class="right" src="images/illustration-editor-desktop.svg" alt="Editor Desktop">
     </section>
   
-    State of the Art Infrastructure
-    With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
-    This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
-
     <section>
-      <div>
-        <article>
-          <div>
-            <h2>Free, open, simple</h2>
-            <p>
-              Blogr is a free and open source application backed by a large community of helpful developers. It supports 
-              features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
-              and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.          
-            </p>
-          </div>
-          
-          <div>
-            <h2>Powerful tooling</h2>
-            <p>
-              Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
-              capable of producing even the most complicated sites.            
-            </p>
-          </div>
-        </article>
-        <img src="images/illustration-laptop-desktop.svg" alt="Editor Laptop">
-      </div>
+      State of the Art Infrastructure
+      With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+      This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+    </section>
+
+    <section class="section">
+      <img class="left" src="images/illustration-laptop-desktop.svg" alt="Editor Laptop">
+      <article>
+        <div>
+          <h2>Free, open, simple</h2>
+          <p>
+            Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+            features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+            and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.          
+          </p>
+        </div>
+        
+        <div>
+          <h2>Powerful tooling</h2>
+          <p>
+            Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+            capable of producing even the most complicated sites.            
+          </p>
+        </div>
+      </article>
     </section>
   </main>
 
@@ -156,9 +167,9 @@
 
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Angel Lopez</a>.
     </div>
-  </footer>
+  </footer> -->
   <script src="js/index.js"></script>
 </body>
 </html>
