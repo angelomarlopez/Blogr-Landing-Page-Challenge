@@ -45,3 +45,17 @@ connectToggle.addEventListener('click', () => {
     document.querySelector('#company-toggle img').classList.toggle('rotate', false);
     document.querySelector('#product-toggle img').classList.toggle('rotate', false);
 });
+
+let desktopImage = window.innerWidth > 1000;
+
+window.onresize  = () => {
+    if (window.innerWidth < 1000 && desktopImage) {
+        document.querySelector('.right').src = 'images/illustration-editor-mobile.svg';
+        document.querySelector('.left').src = 'images/illustration-laptop-mobile.svg';
+        desktopImage = !desktopImage;
+    } else if (window.innerWidth > 1000 && !desktopImage) {
+        document.querySelector('.right').src = 'images/illustration-editor-desktop.svg';
+        document.querySelector('.left').src = 'images/illustration-laptop-desktop.svg';
+        desktopImage = !desktopImage;
+    }
+}
